@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            one super class two sub class
+        </title>
+    </head>
+        <body>
+           <p>one super class two sub class </p> 
+            <script>
+                
+                //super class samsung and nokia 
+                var Mobile=function()
+                {
+                    //this.model=model;
+                    
+                }
+                //prototype method of mobile
+                Mobile.prototype.getModel=function(){return this.model;};
+            
+                //sub class of mobile
+                var Samsung =function(price,model){
+                    this.model=model;
+                    this.price=price;
+                    //Mobile.call(this,model);
+                }
+                
+                //sub class of mobile
+                var Nokia=function(model){
+                    this.model=model;
+                }
+                //code for inheritance 
+                Samsung.prototype=Object.create(Mobile.prototype);
+                Samsung.prototype.constructor=Samsung;
+                Nokia.prototype=Object.create(Mobile.prototype);
+                Nokia.prototype.constructor=Nokia;
+                
+                // prototype method of samsung sub class
+                //" we write subclass prototype method after achieve the prototype inheritance"
+                Samsung.prototype.getPrice=function(){return this.price;};
+                //creating the object of the sumsung sub class
+                var galaxy=new Samsung(14000,"galaxy j7");
+                //calling super class method using sub class object
+                document.write(galaxy.getModel()+"<br>");
+                //calling sub class method
+                document.write(galaxy.getPrice()+"<br>");
+                //creating object of nokia class
+                var note3=new Nokia('note 3');
+                //calling the method of super class
+                document.write(note3.getModel()+"<br>");
+            </script>
+        </body>
+
+</html>

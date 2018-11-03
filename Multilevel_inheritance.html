@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            one super class two sub class
+        </title>
+    </head>
+        <body>
+           <p>one super class two sub class </p> 
+            <script>
+                //method for the inheritance
+                
+                var inheritance=function(child,parent)
+                {
+                    child.prototype=Object.create(parent.prototype);
+                    child.prototype.constructor=child;
+                }
+                
+                //super class of samsung  
+                var Mobile=function()
+                {
+                    this.a=10;
+                    
+                }
+                //prototype method of mobile
+                Mobile.prototype.dispM=function(){return "Mobile class";};
+            
+                //sub class of mobile and also super class of Redmi
+                var Samsung =function(){
+                    Mobile.call(this);
+                    this.b=20;
+                }
+                //sub class Samsung 
+                var Redmi=function(){
+                    Samsung.call(this);
+                    this.c=30;
+                    
+                }
+                //calling inheritance
+                
+                inheritance(Samsung,Mobile);
+                inheritance(Redmi,Samsung);
+                //deffining prototype method for samsung 
+                Samsung.prototype.dispS=function(){return "Samsung  class"};
+                //deffining prototype method for redmi
+                Redmi.prototype.dispR=function(){return "Redmi class"}
+                //creating  object for Redmi
+                var red=new Redmi();
+                //calling all the property using redmi object 
+                document.write( red.dispM() );
+                document.write("<br>"+ red.a);
+                
+                //var mob=new Mobile();
+                document.write("<br>"+red.dispS());
+                document.write("<br>"+red.b);
+                document.write("<br>"+red.dispR());
+                document.write("<br>"+red.c);
+            </script>
+        </body>
+
+</html>

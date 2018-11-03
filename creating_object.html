@@ -1,0 +1,38 @@
+<html>
+
+    <head><title>function in java script</title></head>
+    <body>
+       
+    <script>
+       //declare and initialized object in java script
+        
+        var fees={
+            
+            ram:100,
+            rahim:200,
+            raman:300,
+            jadu:400,
+            modhu:500,
+            sum:function(){
+                return (10+20+30);
+            }
+        };
+        document.write(fees.ram+" "+fees['rahim']+" "+fees.raman);
+        
+        document.write("<br>"+fees["jadu"]+" "+fees.sum());
+        
+        
+       /* 
+        fees['Ram']=100;
+        fees['Rahim']=200;
+        fees['Ranit']=300;
+        fees["Ram Ali"]=400;
+        fees['total']=function(){return (100+200)};
+        document.write(fees.Ram+" "+fees['Rahim']+" "+fees.Ranit);
+        
+        document.write("<br>"+fees["Ram Ali"]+" "+fees.total());
+        */
+        
+    </script>
+    </body>
+</html>

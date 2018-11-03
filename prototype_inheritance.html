@@ -1,0 +1,38 @@
+<html>
+
+    <head><title>function in java script</title></head>
+    <body>
+       
+    <script>
+       //prototype inheritance java script
+        
+        //parent class
+        var Mobile=function(){
+            this.a=10;    
+            
+        }
+        
+        Mobile.prototype.c=30;
+        //sub class or child class
+        var Laptop=function(){
+            //implent the inheritance and for accessing constructor property
+            Mobile.call(this);
+            this.b=20;
+        }
+        //implement prototype inheritance 
+        Laptop.prototype=Object.create(Mobile.prototype);
+        // reset the constructor
+        Laptop.prototype.constructor=Laptop;
+        var dell=new Laptop();
+        document.write(dell.b+"<br>");
+        //accessing parent class property
+        document.write(dell.a+"<br>");
+        // accessing the prototype parent class property
+        document.write(dell.c+"<br>");
+        Laptop.prototype.c=300;
+        //it gives priority its own prototype 
+        document.write(dell.c);
+        
+        </script>
+    </body>
+</html>

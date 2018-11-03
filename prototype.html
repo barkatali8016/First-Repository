@@ -1,0 +1,32 @@
+<html>
+
+    <head><title>function in java script</title></head>
+    <body>
+       
+    <script>
+       //prototype in java script
+        
+        function Mobile(model_no){
+            
+                        this.model=model_no;
+                        this.color="white";
+            
+        }
+        var samsung=new Mobile("galaxy");
+        var nokia=new Mobile("3310");
+        document.write(samsung['model']);
+        samsung.ram="4gb";
+        Mobile.prototype.processor="QuadCore";
+        document.write("<br>"+samsung.processor)
+        document.write("<br>"+nokia.processor)
+        Mobile.prototype.disp=function(){
+            return("I am a prototype function ");
+        }
+        document.write("<br>"+samsung.disp());
+        console.log(samsung);
+        console.log(nokia);
+
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            class in js
+        </title>
+    </head>
+        <body>
+           <p> Hi am a web Developer</p> 
+            <script>
+                
+                class Father{
+                    fShow(){
+                        return "Father Money.<br>";
+                    }
+                }
+                class Son extends Father{
+                    sShow(){
+                        return "Son money.<br>";
+                    }
+                }
+                class GrandSon extends Son{
+                    gShow(){
+                        return "Grand son money.<br>";
+                    }
+                }
+                //creating object for grand son
+                var gs=new GrandSon();
+                document.write(gs.gShow());
+                document.write(gs.sShow());
+                document.write(gs.fShow());
+                </script>
+        </body>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+    <head><title>function in java script</title></head>
+    <body>
+       
+    <script>
+       //conmstructor  in java script
+        
+        function Mobile(model_no){
+            
+                        this.model=model_no;
+            
+                        this.price=function(){
+                          document.write(this.model+" "+"Price is Rs.3000"+" <br>");
+            };
+            
+        }
+        var sam=new Mobile("galaxy");
+        sam.price();
+        var apple=new Mobile("x");
+        apple.price();
+
+        
+        </script>
+    </body>
+</html>

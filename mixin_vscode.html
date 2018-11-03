@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            Mixins or Object.assign() method.
+        </title>
+    </head>
+    <body>
+        <script  type="text/javascript">
+            //we can do the same using method
+            var mixin=function(target,...sources)
+            {
+                Object.assign(target,...sources);
+            }
+            
+            var eating={
+                eat:function(){
+                    return "I can Eat.";
+                }
+            };
+            var walking={
+                walk:function(){
+                    return "I can walk.";
+                }
+            };
+            var talking={
+                talk:function(){
+                    return "I can talk.";
+                }
+            };
+            var starting={
+                start:function(){
+                    return "I am start.";
+                }
+            };
+
+            var Human=function(){
+
+            };
+            var Robot=function(){
+
+            };
+            Object.assign(Human.prototype,eating,walking,talking);
+            mixin(Robot.prototype,walking,talking,starting);
+            var chitti=new Robot();
+            var sonam=new Human();
+            var raj=new Human();
+            document.write("<b>Sonam</b><br>"+sonam.eat()+"<br>");
+            document.write(sonam.walk()+"<br>");
+            document.write(sonam.talk()+"<br>");
+            
+            document.write("<b>Raj</b><br>"+raj.eat()+"<br>");
+            document.write(raj.walk()+"<br>");
+            document.write(raj.talk()+"<br>");
+
+            document.write("<b>Chitti</b><br>"+chitti.talk()+"<br>");
+            document.write(chitti.walk()+"<br>");
+            document.write(chitti.start()+"<br>");
+        </script>
+    </body>
+</html>

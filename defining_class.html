@@ -1,0 +1,28 @@
+<html>
+
+    <head><title>function in java script</title></head>
+    <body>
+       
+    <script>
+    //defining class in html
+        var Mobile=function(model_no,sprice){
+            
+            this.model=model_no;
+            this.price=3000;
+            this.sp=sprice;
+            this.color="white";
+            this.sellingprice=function(){
+                return(this.price+this.sp);
+            }
+            this.disp=function(){
+                document.write("Model No= "+this.model+ "<br>"+ "SellingPrice= "+this.sellingprice());
+            }
+        }
+                                            
+        var samsung=new Mobile("galaxy",2000);
+        var nokia=new Mobile("8.1",3000);
+        samsung.disp();
+        
+        </script>
+    </body>
+</html>

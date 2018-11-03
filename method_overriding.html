@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            one super class two sub class
+        </title>
+    </head>
+        <body>
+           <p>one super class two sub class </p> 
+            <script>
+                //method for the inheritance
+                
+                var inheritance=function(child,parent)
+                {
+                    child.prototype=Object.create(parent.prototype);
+                    child.prototype.constructor=child;
+                }
+                
+                //super class samsung and nokia 
+                var Mobile=function()
+                {
+                    
+                    
+                }
+                //prototype method of mobile
+                Mobile.prototype.disp=function(){return "Super class";};
+            
+                //sub class of mobile
+                var Samsung =function(){
+                   
+                }
+                //calling inheritance
+                
+                inheritance(Samsung,Mobile);
+                Samsung.prototype.disp=function(){return "Sub class"};
+                
+                var sam=new Samsung();
+                document.write( sam.disp() );
+                var mob=new Mobile();
+                document.write("<br>"+mob.disp());
+            </script>
+        </body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            class in js
+        </title>
+    </head>
+        <body>
+           <p> Hi am a web Developer</p> 
+            <script>
+                
+                class Father{
+                    constructor(money)
+                    {   
+                            this.a=500;
+                    
+                            this.money=money;
+                            this.b=this.money+this.a;
+                    }
+                    fShow(){
+                        return "Father Money=" + this.b+"<br>";
+                    }
+                }
+                class Son extends Father{
+                    constructor(money)
+                    {
+                        super(money);
+                        this.money=money;
+                      
+                    }
+                    sShow(){
+                        return "Son money="+this.money+"<br>";
+                    }
+                }
+                //creating object for grand son
+                var s=new Son(500);
+                
+                document.write(s.sShow());
+                document.write(s.fShow());
+                </script>
+        </body>
+
+</html>

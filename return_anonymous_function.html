@@ -1,0 +1,23 @@
+<html>
+
+    <head><title>function in java script</title></head>
+    <body>
+       
+    <script>
+        // returning  anonymous function 
+        
+        function disp(a)
+        {
+            
+            return function(b)
+            {
+                return (a+b);
+            };
+           
+        }
+       fn=disp(10);
+    document.write(fn(20));
+        
+    </script>
+    </body>
+</html>
