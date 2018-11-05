@@ -1,0 +1,48 @@
+/* key_frame*/
+@keyframes movethis{
+    0% {
+        transform: translateX(-50%)
+        translateY(-50%) rotate(0deg); 
+    }
+    100%{
+        transform: translateX(-50%)
+        translateY(-50%) rotate(180deg);        
+    }
+}
+/*style for body of the web page*/
+body{
+    background: #2e2e2e;
+    background-image:url(heart_bit.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* style for a tag*/
+a{
+    color: #fffb1ffd;
+    font-size: 80px;
+    text-decoration: none;
+    letter-spacing: -2px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    text-shadow: 0 20px 25px #b17c0a;
+}
+/* create animation*/
+a:before,
+a:after{
+      
+    content: "";
+    padding: 0.8em 0.4em;
+    border: 5px dotted  rgba(238, 84, 13, 0.933);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    display: block;
+    transform: translateX(-50%) 
+    translateY(-50%);
+    z-index: -1;
+    animation: 5ms infinite alternate ease-in-out movethis;
+}
